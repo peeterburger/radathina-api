@@ -1,10 +1,28 @@
 [
 	{
-		"name": "Akropolis",
+		"name": "Akropolis von Athen",
 		"koordinaten": {
-			"x": 45.1231,
-			"y": 34.2241
+			"x": 37.971532,
+			"y": 23.725749
 		},
-		"beschreibung": "Genauere Beschreibung zur Akropolis"
+		"beschreibung": 'Die Akropolis in Athen ist die wohl bekannteste Vertreterin der als Akropolis bezeichneten Stadtfestungen des antiken Griechenlands. Die Athener Akropolis mit ihren bemerkenswerten Gebäuden wird deshalb oft einfach "die Akropolis" genannt. Den ältesten Teil der Stadt Athen ließ Perikles nach der Zerstörung durch die Perser unter Leitung des berühmten Bildhauers Phidias von den Architekten Iktinos und Kallikrates sowie Mnesikles neu bebauen. Auf einem flachen, 156 Meter hohen Felsen stehen die zwischen 467 v. Chr. und 406 v. Chr. erbauten Propyläen, das Erechtheion, der Niketempel und der Parthenon, in dem eine kolossale Statue der Göttin Athene aus Gold und Elfenbein stand. Eine stark verkleinerte Replik der Statue befindet sich im Archäologischen Nationalmuseum in Athen. Die Akropolis in Athen ist seit 1986 Teil des UNESCO-Weltkulturerbes.'
+	},
+    
+    {
+		"name": "Parthenon",
+		"koordinaten": {
+			"x": 37.9715285,
+			"y": 23.7267166
+		},
+		"beschreibung": 'Der Parthenon (gr. Jungfrauengemach) ist der Tempel für die Stadtgöttin Pallas Athena Parthenos auf der Athener Akropolis. Er wurde zum Dank für die Rettung der Athener und Griechen durch die Göttin nach dem letzten Perserkrieg als dorischer Peripteros erbaut. Im Laufe der Geschichte Griechenlands diente das Gebäude unter anderem auch als Schatzkammer des Attischen Seebunds. Der Parthenon ist eines der berühmtesten noch existierenden Baudenkmäler des antiken Griechenlands und eines der bekanntesten Gebäude weltweit. Das Gebäude beherrscht als zentraler Bau seit fast 2.500 Jahren die Athener Akropolis.'
+	},
+    
+    {
+		"name": "Plaka",
+		"koordinaten": {
+			"x": 37.972222,
+			"y": 23.730556
+		},
+		"beschreibung": 'Der Parthenon (gr. Jungfrauengemach) ist der Tempel für die Stadtgöttin Pallas Athena Parthenos auf der Athener Akropolis. Er wurde zum Dank für die Rettung der Athener und Griechen durch die Göttin nach dem letzten Perserkrieg als dorischer Peripteros erbaut. Im Laufe der Geschichte Griechenlands diente das Gebäude unter anderem auch als Schatzkammer des Attischen Seebunds. Der Parthenon ist eines der berühmtesten noch existierenden Baudenkmäler des antiken Griechenlands und eines der bekanntesten Gebäude weltweit. Das Gebäude beherrscht als zentraler Bau seit fast 2.500 Jahren die Athener Akropolis.'
 	}
 ]
