@@ -12,15 +12,15 @@ const logger = createLogger({
     transports: [
         new transports.Console(),
         new transports.File({
-            filename: './logs/error.log',
+            filename: './log/_models/error.log',
             level: 'error'
         }),
         new transports.File({
-            filename: './logs/info.log',
+            filename: './log/_models/info.log',
             level: 'info'
         })
     ],
     exitOnError: false,
-})
+});
 
 module.exports = logger;
