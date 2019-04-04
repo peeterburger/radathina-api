@@ -1,0 +1,10 @@
+[
+    {
+        "path": "/",
+        "description": "lol"
+    },
+    {
+        "path": "/v1",
+        "description": "lol2"
+    }
+]
