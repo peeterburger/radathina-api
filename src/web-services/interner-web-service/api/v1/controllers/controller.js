@@ -95,7 +95,6 @@ exports.calculate_beeline = function (req, res) {
         var a = Math.sin(d_lat / 2) * Math.sin(d_lat / 2) +
             Math.cos(c_pos_lat * Math.PI / 180) * Math.cos(t_pos_lat * Math.PI / 180) *
             Math.sin(d_lon / 2) * Math.sin(d_lon / 2);
-
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
         // Die effektive Distanz in km ist c mal dem Radius der Erde.
