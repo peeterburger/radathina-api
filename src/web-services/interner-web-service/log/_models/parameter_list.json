@@ -1,0 +1,13 @@
+[{
+        "path": "/",
+        "description": "lol"
+    },
+    {
+        "path": "/info",
+        "description": "lol2"
+    },
+    {
+        "path": "/error",
+        "description": "lol3"
+    }
+]
