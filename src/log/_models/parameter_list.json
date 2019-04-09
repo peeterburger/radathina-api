@@ -1,0 +1,5 @@
+{
+    "home": "http://localhost:3000",
+    "log": "http://localhost:3000/log/info",
+    "error": "http://localhost:3000/log/error"
+}

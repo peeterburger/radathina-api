@@ -1,0 +1,4 @@
+{
+    "home": "http://localhost:3000",
+    "calculate": "http://localhost:3000/api/v1/beeline/:c_pos_lon/:c_pos_lat/:t_pos_lon/:t_pos_lat"
+}
