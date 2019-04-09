@@ -5,7 +5,7 @@ const path = require('path');
 
 const parameter_list = require('../_models/parameter_list');
 
-exports.root = function (req, res) {
+exports.get_parameter_list = function (req, res) {
     res.send(parameter_list);
 }
 

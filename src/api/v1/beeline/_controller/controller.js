@@ -1,5 +1,11 @@
 'use strict';
 
+const parameter_list = require('../_models/parameter_list')
+
+exports.get_parameter_list = function (req, res) {
+    res.json(parameter_list);
+}
+
 // Berechnet die Luftlinie zwischen zwei geographischen Koordinaten.
 exports.calculate_beeline = function (req, res) {
 

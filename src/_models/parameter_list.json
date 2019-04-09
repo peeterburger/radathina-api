@@ -1,13 +1,5 @@
-[{
-        "path": "/",
-        "description": "lol"
-    },
-    {
-        "path": "/api",
-        "description": "lol2"
-    },
-    {
-        "path": "/log",
-        "description": "lol3"
-    }
-]
+{
+    "home": "http://localhost:3000",
+    "api": "http://localhost:3000/api",
+    "log": "http://localhost:3000/log"
+}

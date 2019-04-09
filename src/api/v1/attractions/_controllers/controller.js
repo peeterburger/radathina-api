@@ -1,6 +1,11 @@
 'use strict';
 
 const database = require('../_models/database/database');
+const parameter_list = require('../_models/parameter_list')
+
+exports.get_parameter_list = function (req, res) {
+    res.json(parameter_list);
+}
 
 // Listet alle Sehenswürdigkeiten auf und gibt sie als Array zurück.
 exports.get_attractions_all = function (req, res) {
