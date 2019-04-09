@@ -28,3 +28,15 @@
 { message: '/favicon.ico - GET - ::ffff:10.206.72.71',
   level: 'info',
   timestamp: '2019-04-05T07:52:32.209Z' }
+{ message: '/favicon.ico - GET - ::1',
+  level: 'info',
+  timestamp: '2019-04-09T08:01:26.542Z' }
+{ message: '/attractions - GET - ::1',
+  level: 'info',
+  timestamp: '2019-04-09T08:01:30.873Z' }
+{ message: '/api/v1attractions - GET - ::1',
+  level: 'info',
+  timestamp: '2019-04-09T08:01:36.690Z' }
+{ message: '/attractions - GET - ::ffff:127.0.0.1',
+  level: 'info',
+  timestamp: '2019-04-09T08:02:14.440Z' }
