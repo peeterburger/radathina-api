@@ -25,27 +25,27 @@ exports.calculate_beeline = function (req, res) {
 
     // Die res-Parameter werden in neue Variablen gespeichert, um folgenden
     // Code so kurz und übersichlich wie möglich zu geschtalten.
-    var c_pos_lat = req.params.c_pos_lat;
-    var c_pos_lon = req.params.c_pos_lon;
-    var t_pos_lat = req.params.t_pos_lat;
-    var t_pos_lon = req.params.t_pos_lon;
+    var lon1 = req.query.lon1;
+    var lat1 = req.query.lat1;
+    var lon2 = req.query.lon2;
+    var lat2 = req.query.lat2;
 
     // Überprüft die übergebenen geographischen Koordinaten auf Fehler.
     // Longitude (min): -180
     // Longitude (max): 180
     // Latitude (min): -90
     // Latitude (max): 90
-    if (c_pos_lon < -180 || c_pos_lon > 180) {
-        error_list.push('ERROR: Current Position Longitude (' + c_pos_lon + ') invalid. Accaptable Range: >= -180 AND <=180');
+    if (lon1 < -180 || lon1 > 180) {
+        error_list.push('ERROR: Current Position Longitude (' + lon1 + ') invalid. Accaptable Range: >= -180 AND <=180');
     }
-    if (c_pos_lat < -90 || c_pos_lat > 90) {
-        error_list.push('ERROR: Current Position Latitude (' + c_pos_lat + ') invalid. Accaptable Range: >= -90 AND <=90');
+    if (lat1 < -90 || lat1 > 90) {
+        error_list.push('ERROR: Current Position Latitude (' + lat1 + ') invalid. Accaptable Range: >= -90 AND <=90');
     }
-    if (t_pos_lon < -180 || t_pos_lon > 180) {
-        error_list.push('ERROR: Target Position Longitude (' + t_pos_lon + ') invalid. Accaptable Range: >= -180 AND <=180');
+    if (lon2 < -180 || lon2 > 180) {
+        error_list.push('ERROR: Target Position Longitude (' + lon2 + ') invalid. Accaptable Range: >= -180 AND <=180');
     }
-    if (t_pos_lat < -90 || t_pos_lat > 90) {
-        error_list.push('ERROR: Target Position Latitude (' + t_pos_lat + ') invalid. Accaptable Range: >= -90 AND <=90');
+    if (lat2 < -90 || lat2 > 90) {
+        error_list.push('ERROR: Target Position Latitude (' + lat2 + ') invalid. Accaptable Range: >= -90 AND <=90');
     }
 
     // Falls das Fehler-Array nicht leer ist, ist bei der Überprüfung
@@ -65,8 +65,8 @@ exports.calculate_beeline = function (req, res) {
 
         // Berechnet die Distanzen zwischen jeweils der Longitude und der
         // Latitude.
-        var d_lat = t_pos_lat * Math.PI / 180 - c_pos_lat * Math.PI / 180;
-        var d_lon = t_pos_lon * Math.PI / 180 - c_pos_lon * Math.PI / 180;
+        var d_lat = lat2 * Math.PI / 180 - lat1 * Math.PI / 180;
+        var d_lon = lon2 * Math.PI / 180 - lon1 * Math.PI / 180;
 
         // Hier wird effektiv die Distanz beider Koordinaten berechnet.
         // Um die Krümmung der Erde zu berücksichtigen, wird die 'Haversine
@@ -77,7 +77,7 @@ exports.calculate_beeline = function (req, res) {
         // die Längen der Seite berechnet, wobei Seite c der gewünschten Distanz
         // entspricht.
         var a = Math.sin(d_lat / 2) * Math.sin(d_lat / 2) +
-            Math.cos(c_pos_lat * Math.PI / 180) * Math.cos(t_pos_lat * Math.PI / 180) *
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
             Math.sin(d_lon / 2) * Math.sin(d_lon / 2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 

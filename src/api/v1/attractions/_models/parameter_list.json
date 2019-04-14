@@ -1,6 +1,6 @@
 {
     "home": "http://localhost:3000",
     "getAll": "http://localhost:3000/api/v1/attractions/all",
-    "getByName": "http://localhost:3000/api/v1/attractions/:attr_name",
-    "getNearby": "http://localhost:3000/api/v1/attractions/:c_pos_lon/:c_pos_lat/:radius"
+    "getByName": "http://localhost:3000/api/v1/attractions/{:attr_name}",
+    "getNearby": "http://localhost:3000/api/v1/attractions/{:lon}/{:lat}/{:radius}"
 }
