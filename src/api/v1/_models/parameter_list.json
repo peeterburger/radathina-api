@@ -1,5 +1,0 @@
-{
-    "home": "http://localhost:3000",
-    "attractions": "http://localhost:3000/api/v1/attractions",
-    "beeline": "http://localhost:3000/api/v1/beeline"
-}
