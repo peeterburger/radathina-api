@@ -1,4 +1,0 @@
-{
-    "home": "http://localhost:3000",
-    "calculate": "http://localhost:3000/api/v1/beeline/calculate/?lon1={:lon1}&lat1={:lat1}&lon2={:lon2}&lat2={:lat2}"
-}
