@@ -7,7 +7,7 @@ const functions = require('../config/functions');
 
 router.get('/', async (req, res) => {
     // get attractions info
-    res.send("get beeline info");
+    res.json("get beeline info");
 });
 
 router.get('/calculate', async (req, res) => {
@@ -16,11 +16,10 @@ router.get('/calculate', async (req, res) => {
     let lon2 = req.query.lon2;
     let lat2 = req.query.lat2;
 
-    if (!(lat1 && lon1 && lat2 && lon2)) {
-        return res.status(400).json("Invalid Request");
+    if (!(functions.validateCoordinates(lat1, lon1) &&
+            functions.validateCoordinates(lat2, lon2))) {
+        return res.status(400).json("Invalid Coordinates");
     }
-
-    // further validation
 
     let beeline = functions.calculateBeeline(lat1, lon1, lat2, lon2);
 

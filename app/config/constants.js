@@ -2,7 +2,7 @@
 
 module.exports = {
     DEFAULT_SERVER_IP: "0.0.0.0",
-    DEFAULT_SERVER_PORT: 3000,
+    DEFAULT_SERVER_PORT: 12345,
 
     DEFAULT_MONGODB_HOST: "localhost",
     DEFAULT_MONGODB_PORT: 27017,

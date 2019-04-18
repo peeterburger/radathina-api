@@ -25,13 +25,14 @@ AttractionSchema.statics.getAttraction = function ({
         ...filter
     };
 
+    console.log(query);
+
     return new Promise((resolve, reject) => {
         this.find(query, {}, {
             limit: amount
         }, (err, attractions) => {
             if (err) return reject(err);
             attractions = attractions || [];
-
             resolve(amount == 1 ? attractions[0] : attractions);
         });
     });

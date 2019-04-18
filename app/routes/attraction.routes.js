@@ -9,12 +9,15 @@ const functions = require('../config/functions');
 const Attraction = require('../models/attraction');
 
 router.get('/', async (req, res) => {
-    // get attractions info
-    res.send("get attractions info");
+    res.json('get attractions info');
 });
 
 router.get('/list', async (req, res) => {
     const amount = +req.query.amount || 0;
+
+    if (Math.abs(amount) > 500) {
+        return res.status(400).json("Invalid amount");
+    }
 
     try {
         const attractions = await Attraction.getAttraction({
@@ -33,7 +36,7 @@ router.get('/list/:attraction_name', async (req, res) => {
     try {
         const first_attraction = await Attraction.getAttraction({
             amount: 1,
-            query: {
+            filter: {
                 name: attraction_name
             }
         });
@@ -47,13 +50,11 @@ router.get('/list/:attraction_name', async (req, res) => {
 router.get('/nearby', async (req, res) => {
     const lat1 = req.query.lat;
     const lon1 = req.query.lon;
-    const radius = req.query.radius || DEFAULT_NEARBY_RADIUS_M;
+    const radius = req.query.radius || constants.DEFAULT_NEARBY_RADIUS_M;
 
-    if (!(lat1 && lon1)) {
-        return res.status(400).send("Invalid Request");
+    if (!(functions.validateCoordinates(lat1, lon1))) {
+        return res.status(400).json('Invalid Coordinates');
     }
-
-    // further validation
 
     try {
         let attractions_nearby = [];
@@ -63,9 +64,9 @@ router.get('/nearby', async (req, res) => {
             let lat2 = attraction.coordinates.lat;
             let lon2 = attraction.coordinates.lon;
 
-            let beeline = functions.calculateBeeline(lat1, lon1, lat2, lon2) * 1000
-            
-            console.log(lat1 + "," + lon1 + " -> " + lat2 + "," + lon2 + " = " + beeline + "m")
+            let beeline = functions.calculateBeeline(lat1, lon1, lat2, lon2);
+
+            console.log(lat1 + "," + lon1 + " -> " + lat2 + "," + lon2 + " = " + beeline + "m");
 
             if (beeline <= radius) {
                 attractions_nearby.push(attraction);

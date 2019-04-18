@@ -27,5 +27,5 @@ const server_ip = process.env.IP || constants.DEFAULT_SERVER_IP;
 
 server.listen(server_port, server_ip, function() {
 	const addr = server.address();
-	console.log("Server listening at", addr.address + ":" + addr.port);
+	console.log('Server listening at', addr.address + ':' + addr.port);
 });
