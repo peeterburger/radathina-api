@@ -2,10 +2,10 @@
   "name": "internal-web-service",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,8 @@
     "@std/esm": "^0.26.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "winston": "^3.2.1"
+    "mongoose": "^5.5.2",
+    "morgan": "^1.9.1"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.10"
-  }
+  "devDependencies": {}
 }
