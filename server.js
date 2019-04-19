@@ -20,6 +20,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
+// Die API befindet sich auf [baseUrl]/api/v1
 app.use('/api/v1', require('./app/routes'));
 
 const server_port = process.env.PORT || constants.DEFAULT_SERVER_PORT;
