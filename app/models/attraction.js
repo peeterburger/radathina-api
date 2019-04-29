@@ -14,6 +14,12 @@ const AttractionSchema = new Schema({
     coordinates: {
         lat: Number,
         lon: Number
+    },
+    description: {
+        type: String
+    },
+    category: {
+        type: String
     }
 }, {
     timestamps: true
